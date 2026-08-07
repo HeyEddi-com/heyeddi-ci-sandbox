@@ -1,0 +1,5 @@
+{
+  "app_name": "heyeddi-ci-sandbox",
+  "version": "0.1.0",
+  "greeting": "hello from shared config"
+}
