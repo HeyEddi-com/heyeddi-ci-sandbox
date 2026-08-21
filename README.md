@@ -26,3 +26,7 @@ cd js && npm test
 ## Purpose
 
 Open feature PRs stay unmerged so the HeyEddi GitHub App can review them. Not a product.
+
+## Video demo
+
+See [DEMO.md](./DEMO.md) for the shot list and the open showcase PR.
