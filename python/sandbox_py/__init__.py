@@ -11,4 +11,5 @@ from sandbox_py.checkout import (  # noqa: E402
     apply_discount,
     build_order_query,
     format_receipt,
+    free_shipping_eligible,
 )

@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { displayName, mergeCheckoutPrefs, withTax } from "../src/checkout.js";
+import {
+  displayName,
+  mergeCheckoutPrefs,
+  splitRefund,
+  withTax,
+} from "../src/checkout.js";
 
 test("displayName uppercases", () => {
   assert.equal(
@@ -18,4 +23,9 @@ test("mergeCheckoutPrefs overlays keys", () => {
 
 test("withTax adds basis points", () => {
   assert.equal(withTax(1000, 825), 1083);
+});
+
+test("splitRefund even split", () => {
+  // Happy path only — does not assert remainder cents are preserved.
+  assert.deepEqual(splitRefund(99, 3), [33, 33, 33]);
 });

@@ -30,3 +30,17 @@ export function mergeCheckoutPrefs(defaults, incoming) {
 export function withTax(totalCents, taxBps) {
   return Math.round(totalCents * (1 + taxBps / 10_000));
 }
+
+/**
+ * Split a refund across N installments.
+ * DEMO BUG: truncates with Math.floor and drops the remainder, so
+ * refundCents=100 / parts=3 yields [33,33,33] (99) and loses 1¢.
+ *
+ * @param {number} refundCents
+ * @param {number} parts
+ * @returns {number[]}
+ */
+export function splitRefund(refundCents, parts) {
+  const each = Math.floor(refundCents / parts);
+  return Array.from({ length: parts }, () => each);
+}
