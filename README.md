@@ -26,3 +26,10 @@ cd js && npm test
 ## Purpose
 
 Open feature PRs stay unmerged so the HeyEddi GitHub App can review them. Not a product.
+
+## Related-context fixture
+
+Branch `test/related-context-out-of-diff` renames Python/JS greet exports only.
+Callers (`python/tests/test_greet.py`, `js/src/index.js`, JS tests) stay **out of the
+diff** so production review can prove related-file packing. `cmd/ping/main.go`
+exercises the unsupported-stack note.
