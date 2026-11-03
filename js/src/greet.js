@@ -1,4 +1,4 @@
 /** @param {string} [name] */
-export function greet(name = "world") {
+export function greetUser(name = "world") {
   return `hello, ${name}`;
 }

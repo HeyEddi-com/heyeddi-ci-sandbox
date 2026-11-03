@@ -3,6 +3,6 @@
 __version__ = "0.1.0"
 
 
-def greet(name: str = "world") -> str:
+def greet_user(name: str = "world") -> str:
     """Return a friendly greeting."""
     return f"hello, {name}"
