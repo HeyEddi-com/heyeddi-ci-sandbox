@@ -1,5 +1,5 @@
 module "vpc" {
   source = "../modules/vpc"
 
-  name = "sandbox-related"
+  name = "sandbox-related-v2"
 }
